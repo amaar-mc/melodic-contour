@@ -6,8 +6,6 @@
 
 Melodic contour theory in TypeScript. Implements the core formalisms from Morris (1987), Friedmann (1985), and Marvin and Laprade (1987).
 
-**npm release is pending** (requires manual 2FA OTP). Install from GitHub for now.
-
 ## What is contour theory?
 
 Melodic contour describes the shape of a melody - its pattern of ups and downs - independent of specific intervals. A contour segment (CSeg) represents this shape as a sequence of ranked positions: the lowest note becomes 0, the next higher note 1, and so on.
