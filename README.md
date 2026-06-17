@@ -1,5 +1,9 @@
 # melodic-contour
 
+<p align="center">
+  <img src="assets/logo.png" alt="melodic-contour logo" width="160">
+</p>
+
 Melodic contour theory in TypeScript. Implements the core formalisms from Morris (1987), Friedmann (1985), and Marvin and Laprade (1987).
 
 **npm release is pending** (requires manual 2FA OTP). Install from GitHub for now.
