@@ -1,0 +1,56 @@
+{
+  "name": "melodic-contour",
+  "version": "0.1.0",
+  "description": "Melodic contour theory in TypeScript: CSeg, COM matrix, contour adjacency series, contour similarity, and contour equivalence classes (Morris, Friedmann, Marvin and Laprade)",
+  "type": "module",
+  "main": "./dist/index.cjs",
+  "module": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "import": {
+        "types": "./dist/index.d.ts",
+        "default": "./dist/index.js"
+      },
+      "require": {
+        "types": "./dist/index.d.cts",
+        "default": "./dist/index.cjs"
+      }
+    }
+  },
+  "files": [
+    "dist"
+  ],
+  "sideEffects": false,
+  "scripts": {
+    "build": "tsup",
+    "test": "vitest run",
+    "lint": "biome check src tests",
+    "typecheck": "tsc --noEmit",
+    "format": "biome format --write src tests",
+    "example": "tsx examples/demo.ts"
+  },
+  "devDependencies": {
+    "@biomejs/biome": "^2.5.0",
+    "@types/node": "^22.0.0",
+    "fast-check": "^3.23.2",
+    "tsup": "^8.3.6",
+    "tsx": "^4.19.2",
+    "typescript": "^5.7.3",
+    "vitest": "^2.1.8"
+  },
+  "keywords": ["music-theory", "contour", "melody", "music", "typescript", "computational-musicology", "cseg", "com-matrix"],
+  "license": "MIT",
+  "author": "Amaar Chughtai",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/amaar-mc/melodic-contour.git"
+  },
+  "homepage": "https://github.com/amaar-mc/melodic-contour#readme",
+  "bugs": {
+    "url": "https://github.com/amaar-mc/melodic-contour/issues"
+  },
+  "engines": {
+    "node": ">=18"
+  }
+}
