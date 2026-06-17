@@ -8,7 +8,7 @@
   prunes a CSeg to its prime form and reports the reduction depth. Returns
   `{ prime: readonly number[]; depth: number }`.
 
-Note: npm package publication of 0.2.0 is pending (requires manual 2FA OTP). Install from GitHub in the meantime.
+Note: Published to npm 2026-06-17 (v0.2.0).
 
 ## [0.1.0] - 2026-06-17
 
@@ -25,4 +25,4 @@ Note: npm package publication of 0.2.0 is pending (requires manual 2FA OTP). Ins
 - `retrograde()`, `inversion()`, `retrogradeInversion()`: canonical transformations.
 - `equivalenceClass()`: prime, retrograde, inversion, and retrograde-inversion forms.
 
-Note: npm package publication is pending (requires manual 2FA OTP). Install from GitHub in the meantime.
+Note: Published to npm 2026-06-17.
