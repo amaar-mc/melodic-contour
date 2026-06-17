@@ -1,6 +1,6 @@
 {
   "name": "melodic-contour",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "description": "Melodic contour theory in TypeScript: CSeg, COM matrix, contour adjacency series, contour similarity, and contour equivalence classes (Morris, Friedmann, Marvin and Laprade)",
   "type": "module",
   "main": "./dist/index.cjs",

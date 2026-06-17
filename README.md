@@ -53,6 +53,32 @@ Reversal of the inversion.
 ### `equivalenceClass(c: number[]): number[][]`
 Returns unique forms among {Prime, Retrograde, Inversion, RetrogradeInversion}.
 
+### `contourReduction(cseg: readonly number[]): ContourReductionResult`
+Applies Morris's contour-reduction algorithm to reduce a CSeg to its prime form.
+
+Returns `{ prime: readonly number[]; depth: number }` where:
+- `prime` is the reduced CSeg (distinct integers 0..k-1 by relative height, always a valid CSeg).
+- `depth` is the number of reduction passes that removed at least one interior point. An already-irreducible contour has depth 0.
+
+**Algorithm** (Morris 1993): The first and last elements are always retained. On each pass, interior points that are neither a local maximum nor a local minimum among the currently-retained neighbors are removed. Each pass that removes at least one point increments the depth. Passes continue until the contour is stable.
+
+**Examples:**
+
+```typescript
+import { contourReduction } from "melodic-contour";
+
+// A monotonic contour reduces to just its endpoints:
+contourReduction([0, 1, 2, 3, 4]); // { prime: [0, 1], depth: 1 }
+
+// An arch contour is already irreducible:
+contourReduction([0, 2, 1]);        // { prime: [0, 2, 1], depth: 0 }
+
+// A 7-element contour with one non-extreme interior point:
+contourReduction([0, 5, 3, 4, 1, 2, 6]); // { prime: [0, 4, 2, 3, 1, 5], depth: 1 }
+```
+
+**Reference:** Morris, R. D. (1993). New directions in the theory and analysis of musical contour. *Music Theory Spectrum*, 15(2), 205-228.
+
 ## Usage
 
 ```typescript

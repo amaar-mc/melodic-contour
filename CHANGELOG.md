@@ -1,5 +1,15 @@
 # Changelog
 
+## [0.2.0] - 2026-06-17
+
+### Added
+
+- `contourReduction(cseg)`: Morris's contour-reduction algorithm (Morris 1993). Iteratively
+  prunes a CSeg to its prime form and reports the reduction depth. Returns
+  `{ prime: readonly number[]; depth: number }`.
+
+Note: npm package publication of 0.2.0 is pending (requires manual 2FA OTP). Install from GitHub in the meantime.
+
 ## [0.1.0] - 2026-06-17
 
 ### Added
